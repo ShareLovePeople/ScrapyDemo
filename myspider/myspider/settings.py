@@ -9,6 +9,7 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+#整个爬虫的设置
 BOT_NAME = 'myspider'
 
 SPIDER_MODULES = ['myspider.spiders']
