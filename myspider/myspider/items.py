@@ -12,3 +12,10 @@ class MyspiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
+
+
+#在 Items中预先定义好要爬点字段
+class SunspiderItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    pass

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
+from myspider.myspider.items import SunspiderItem
 
 class SunSpider(scrapy.Spider):
     name = 'sun'
@@ -8,4 +9,5 @@ class SunSpider(scrapy.Spider):
     start_urls = ['http://www.sun0769.com/']
 
     def parse(self, response):
+        item = SunspiderItem()
         pass
