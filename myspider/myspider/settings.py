@@ -16,6 +16,7 @@ SPIDER_MODULES = ['myspider.spiders']
 NEWSPIDER_MODULE = 'myspider.spiders'
 
 LOG_LEVEL = "WARNING" #设置日志打印等级  INFO DEBUG WARNING ERROR
+LOG_FILE = "./log.log"       #设置将日志保存在文件中
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'myspider (+http://www.yourdomain.com)'
