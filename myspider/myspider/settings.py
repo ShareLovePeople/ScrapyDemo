@@ -66,9 +66,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'myspider.pipelines.MyspiderPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'myspider.pipelines.MyspiderPipeline': 300,
+}
+#设置要启动的 Item管道 数值越小 越先经过
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

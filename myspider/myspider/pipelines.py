@@ -8,4 +8,6 @@
 
 class MyspiderPipeline(object):
     def process_item(self, item, spider):
+        if spider.name == "itcast":
+            print(item)
         return item
