@@ -11,5 +11,5 @@ class ItcastSpider(scrapy.Spider):
     start_urls = ['http://www.itcast.cn/channel/teacher.shtml']   #最开始请求点URL地址
 
     def parse(self, response):
-        print(response)
-        pass
+        ret1 = response.xpath("//div[@class='tea_con']//h3/text()").extract()
+        print(ret1)
