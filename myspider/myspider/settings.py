@@ -15,6 +15,7 @@ BOT_NAME = 'myspider'
 SPIDER_MODULES = ['myspider.spiders']
 NEWSPIDER_MODULE = 'myspider.spiders'
 
+LOG_LEVEL = "WARNING" #设置日志打印等级  INFO DEBUG WARNING ERROR
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'myspider (+http://www.yourdomain.com)'
