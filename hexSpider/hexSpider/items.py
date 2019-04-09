@@ -16,6 +16,17 @@ class HexspiderItem(scrapy.Item):
 
 class ChapterItem(scrapy.Item):
     # define the fields for your item here like:
+    # 小说章节
     name = scrapy.Field()
     content = scrapy.Field()
+    pass
+
+
+class FictionItem(scrapy.Item):
+    # define the fields for your item here like:
+    # 小说内容
+    name = scrapy.Field()  # 名称
+    author = scrapy.Field()  # 作者
+    intro = scrapy.Field()  # 简介
+    type = scrapy.Field()  # 小说类别
     pass
