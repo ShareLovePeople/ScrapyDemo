@@ -17,11 +17,8 @@ class ChapterspiderSpider(scrapy.Spider):
 
         next_url = ""
         for a in urls:
-            text= a.xpath("text()").extract_first()
+            text = a.xpath("text()").extract_first()
 
             if "下一页" == text:
-                next_url  = a.xpath("@href").extract_first()
-                pass
-        #<a href="/files/article/html/209/209171/index.html">返回列表</a>
-
-        # yield  item
+                next_url = "https://www.haxtxt.net" + str(a.xpath("@href").extract_first())
+                break
