@@ -13,6 +13,7 @@ class ChapterspiderSpider(scrapy.Spider):
         item["name"] = response.xpath("//div[@id='BookCon']/h1/text()").extract_first()
         item["content"] = "".join(response.xpath("//div[@id='BookText']/text()").extract())
 
+        yield item
         urls = response.xpath("//div[@class='link xb']/a")
 
         next_url = ""
@@ -22,3 +23,6 @@ class ChapterspiderSpider(scrapy.Spider):
             if "下一页" == text:
                 next_url = "https://www.haxtxt.net" + str(a.xpath("@href").extract_first())
                 break
+
+        if next_url.strip() != "":
+            yield scrapy.Request(url=next_url, callback=self.parse)
