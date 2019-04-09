@@ -8,4 +8,6 @@
 
 class HexspiderPipeline(object):
     def process_item(self, item, spider):
+        print(spider)
+        print(item)
         return item
