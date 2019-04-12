@@ -7,12 +7,13 @@ HEXHOST = "https://www.haxtxt.net"
 
 class ChapterspiderSpider(scrapy.Spider):
     name = 'chapterSpider'
-    allowed_domains = ['haxtxt.net']
+    allowed_domains = ['haxtxt.net']  # 抓取的域名
     start_urls = ['https://www.haxtxt.net/']
 
     def parse(self, response):
-        url = "https://www.haxtxt.net/xiaoshuo/20/1.htm"
-        yield scrapy.Request(url=url, callback=self.lwlist)
+        print("chapterSpider-parse")
+        url = "https://www.haxtxt.net/files/article/html/37/37937/3860452.html"
+        yield scrapy.Request(url=url, callback=self.chapter)
         pass
 
     def lwlist(self, response):

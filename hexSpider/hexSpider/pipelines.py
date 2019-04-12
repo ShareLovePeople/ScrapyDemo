@@ -16,5 +16,37 @@ from hexSpider.items import FictionItem
 class HexspiderPipeline(object):
 
     def process_item(self, item, spider):
+        """
+        必须实现：对Item进行处理
+        :param item:
+        :param spider:
+        :return:
+        """
         print(type(item) == FictionItem)  #判断数据的类型
         return item
+
+    def from_crawler(self, cls, crawler):
+        """
+        不必须：启用spider时候执行，早于open
+        :param cls:
+        :param crawler:
+        :return:
+        """
+        pass
+
+    def open_spider(self, spider):
+        """
+        不必须：打开spider时候执行,一般进行一些初始化操作，如连接数据库
+        :param spider:
+        :return:
+        """
+        print("open_spider")
+        pass
+
+    def close_spider(self, spider):
+        """
+        不必须：关闭spider时候执行，一般进行一些收尾操作，如关闭数据库
+        :param spider:
+        :return:
+        """
+        print("close_spider")
