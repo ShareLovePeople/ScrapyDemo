@@ -40,7 +40,7 @@ class ChapterspiderSpider(scrapy.Spider):
     def fiction(self, response):
         """
         抓取小说目录页内容
-        :param response:
+        :param response:he
         :return:
         """
         item = FictionItem()
@@ -51,6 +51,7 @@ class ChapterspiderSpider(scrapy.Spider):
         item["intro"] = "".join(response.xpath("//p[@class='intro']/text()").extract())
         yield item
 
+        return
         first_url = response.xpath("//dl[@class='chapterlist']/dd[1]/a[1]/@href").extract_first()
 
         first_url = HEXHOST + first_url
